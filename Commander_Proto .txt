@@ -1,0 +1,27 @@
+  CP ( Commander Proto) language
+# Memory Structure
+
+Program is made of multiple lines.
+Each line has 16 boxes.
+All boxes start with value 0.
+You use a pointer to move inside a line.
+
+# Basic Instructions
+
+L ------> move pointer left
+R ------> move pointer right
+A ------> add 1 to current box
+S  ------> subtract 1 from current box
+# Input / Output
+:(n) ------> take user input into box n
+;(n)  ------> output value of box n
+.(value) ------> store hidden value (number, text, emoji etc., but no special characters)
+# Cross-Line Access
+,[x,n] ------> access box n from line x
+(usable only in that row)
+# Loop System
+{[N]B}  ------> beginning of loop
+{E} ------> end of loop
+Loop runs the code inside (condition that the box value is not equal to zero.)
+# Jump Concept
+IC == n_J(n) ------> instruction counter based jump idea
